@@ -1,0 +1,108 @@
+/* Este arquivo CSS define os estilos para os elementos HTML no arquivo aberto. */
+
+* {
+    /* Este seletor aplica a fonte Poppins a todos os elementos no documento. */
+    font-family: Poppins;
+    /* Este seletor remove qualquer padding e margem padrão aos elementos. */
+    padding: 0;
+    margin: 0;
+    /* Este seletor define a propriedade box-sizing como border-box, o que significa que o padding e a borda são incluídos na largura e altura total do elemento. */
+    box-sizing: border-box;
+}
+
+body {
+    /* Este seletoor aplica uma margem-bottom de 1rem ao elemento body. */
+    margin-bottom: 1rem;
+    /* Este seletoor aplica uma cor de fundo de rgb(77, 24, 77) ao elemento body. */
+    background-color: rgb(77, 24, 77);
+}
+
+h1 {
+    /* Este seletoor aplica uma margem-bottom de 1rem ao elemento h1. */
+    margin-bottom: 1rem;
+    /* Este seletoor aplica uma cor de fundo de greenyellow ao elemento h1. */
+    color: greenyellow;
+}
+
+button {
+    /* Este seletoor aplica vários estilos aos elementos button, incluindo padding, cor de fundo, cor de texto, borda, borda-raio, cursor, opacidade e tamanho de fonte. */
+    padding: .6rem 1.2rem;
+    background-color: #bff2ff;
+    color:black;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+    opacity: 0.9;
+    font-size: 1rem;
+    /* Este seletoor aplica uma transição de 0.4s aos elementos button. */
+    transition: 0.4s;
+}
+
+#open-modal {
+    /* Este seletoor aplica uma cor de fundo de #bff2ff ao elemento button com o id "open-modal". */
+    background-color: #bff2ff;
+}
+
+button:hover {
+    /* Este seletoor aplica uma opacidade de 1 aos elementos button quando o usuário passa o mouse sobre eles. */
+    opacity: 1;
+}
+
+#fade, #modal {
+    /* Este seletoor aplica uma transição de .5s, uma opacidade de 1 e um evento de pointer-events aos elementos #fade e #modal. */
+    transition: .5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#fade {
+    /* Este seletoor aplica uma posição fixa, top, left, largura, altura e uma cor de fundo de rgba(0, 0, 0, 0.6) ao elemento #fade. */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Este seletoor aplica um z-index de 5 ao elemento #fade. */
+    z-index: 5;
+}
+
+#modal {
+    /* Este seletoor aplica uma posição fixa, left, top, z-index, transform, cor de fundo, largura máxima, padding e borda-raio ao elemento #modal. */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 500px;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+}
+
+.modal-header {
+    /* Este seletoor aplica um display de flex, uma justificação de conteúdo entre a esquerda e a direita, uma alinhamento vertical, uma borda-inferior e um margem-bottom aos elementos .modal-header. */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.modal-body p {
+    /* Este seletoor aplica uma margem-bottom aos elementos p dentro do .modal-body. */
+    margin-bottom: 1rem;
+}
+
+#modal.hide, #fade.hide {
+    /* Este seletores aplica uma opacidade de 0 e um evento de pointer-events de none aos elementos #modal e #fade quando eles tiverem a classe "hide". */
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modal-hide {
+    /* Este seletores aplica uma posição de top a zero ao elemento #modal-hide. */
+    top: 0;
+}
